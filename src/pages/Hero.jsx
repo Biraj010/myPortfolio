@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { portfolioData } from "../data";
+import { Link } from "react-scroll";
 
-const Hero = ({ hero }) => {
-  const { name, titles, description } = hero;
+const Hero = () => {
+  const { name, titles, description } = portfolioData.hero;
   const typedElement = useRef(null);
 
   useEffect(() => {
@@ -33,12 +35,18 @@ const Hero = ({ hero }) => {
           I'm a <span ref={typedElement}></span>
         </h2>
         <p className="text-secondary text-lg md:text-xl mb-8">{description}</p>
-        <a
-          href="#projects"
-          className="bg-accent text-background font-bold py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors"
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          offset={-70}
+          className="bg-accent text-background font-bold py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors cursor-pointer"
+          spy={true}
+          activeClass="text-accent"
+          hash={true}
         >
           View My Work
-        </a>
+        </Link>
       </div>
     </section>
   );

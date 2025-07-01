@@ -1,6 +1,8 @@
 import React from "react";
+import { portfolioData } from "../data";
 
-const Skills = ({ skills }) => {
+const Skills = () => {
+  const skills = portfolioData.skills;
   const skillCategories = Object.keys(skills);
 
   return (

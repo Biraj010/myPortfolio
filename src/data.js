@@ -9,6 +9,12 @@ import blog2 from "./assets/img/blog 2.png";
 import blog3 from "./assets/img/blog 3.png";
 import shopping1 from "./assets/img/one item.png";
 import shopping2 from "./assets/img/Screenshot 2025-06-21 012735.png";
+import eCommerce1 from "./assets/img/e-commerce1.png";
+import eCommerce2 from "./assets/img/e-commerce2.png";
+import eCommerce3 from "./assets/img/e-commerce23.png";
+import eCommerce4 from "./assets/img/e-commerce24.png";
+import eCommerce5 from "./assets/img/e-commerce5.png";
+import eCommerce6 from "./assets/img/e-commerce6.png";
 
 export const portfolioData = {
   header: {
@@ -69,9 +75,9 @@ export const portfolioData = {
       ],
       description:
         "Developed an interactive doctor appointment platform with dynamic booking cards, RESTful API integration for data fetching and user auth, and seamless page navigation.",
-      stack: ["React.js", "Redux", "Axios", "React Router"],
+      stack: ["React.js", "Redux", "Axios", "Tailwind CSS", "React Router"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Biraj010/Appointment",
     },
     {
       title: "Personal Blog Website",
@@ -79,9 +85,16 @@ export const portfolioData = {
       gallery: [{ src: blog2 }, { src: blog3 }],
       description:
         "Built a responsive blogging platform with a dark/light mode switch. Features include data fetching, user authentication, and form submissions, with robust API testing using Postman.",
-      stack: ["React.js", "Redux Toolkit", "Axios", "Postman", "CSS"],
+      stack: [
+        "React.js",
+        "Redux Toolkit",
+        "Axios",
+        "Postman",
+        "Tailwind CSS",
+        "React Router",
+      ],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Biraj010/Blog",
     },
     {
       title: "Blood Bank Management System",
@@ -89,9 +102,19 @@ export const portfolioData = {
       gallery: [{ src: blood1 }, { src: blood2 }, { src: blood3 }],
       description:
         "A React-based dashboard to track blood donations and availability. Integrated a REST API for real-time data and implemented role-based authentication for admins and users.",
-      stack: ["React", "REST API", "Authentication"],
+      stack: [
+        "React",
+        "REST API",
+        "Authentication",
+        "Tailwind CSS",
+        "React Router",
+        "Axios",
+        "Redux",
+        
+      ],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl:
+        "https://github.com/Biraj010/Blood-Donation-management-system.git",
     },
     {
       title: "Online Shopping App",
@@ -99,9 +122,40 @@ export const portfolioData = {
       gallery: [{ src: shopping1 }, { src: shopping2 }],
       description:
         "An e-commerce front-end with efficient state management using Redux. Features include API integration for product data and auth, shopping cart, and checkout functionality.",
-      stack: ["React.js", "Redux", "Axios", "E-commerce"],
+      stack: [
+        "React.js",
+        "Redux",
+        "Axios",
+        "E-commerce",
+        "Tailwind CSS",
+        "React Router",
+      ],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Biraj010/Online-Shopping-react-redux",
+    },
+    {
+      title: "E-commerce Website",
+      image: eCommerce1,
+      gallery: [
+        { src: eCommerce1 },
+        { src: eCommerce2 },
+        { src: eCommerce3 },
+        { src: eCommerce4 },
+        { src: eCommerce5 },
+        { src: eCommerce6 },
+      ],
+      description:
+        "Developed a responsive and feature-rich e-commerce frontend using React.js, Redux, Tailwind CSS, and Axios, with role-based access, JWT authentication, and protected routes. Built dynamic user and admin interfaces including product listings, cart, order management, real-time chat, and a professional admin dashboard.",
+      stack: [
+        "React.js",
+        "Redux Toolkit",
+        "Axios",
+        "Postman",
+        "Tailwind CSS",
+        "React Router",
+      ],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Biraj010/e-commerce",
     },
   ],
   contact: {

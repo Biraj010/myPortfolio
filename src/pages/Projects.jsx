@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import { portfolioData } from "../data";
 
-const Projects = ({ projects }) => {
+const Projects = () => {
+  const projects = portfolioData.projects;
   const [lightboxIndex, setLightboxIndex] = useState(-1);
 
   return (

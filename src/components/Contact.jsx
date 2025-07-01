@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { portfolioData } from "../data";
 
-const Contact = ({ contact }) => {
-  const { paragraph } = contact;
+const Contact = () => {
+  const { paragraph } = portfolioData.contact;
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -1,8 +1,9 @@
 import React from "react";
 import myphoto from "../assets/img/myphoto.jpg";
+import { portfolioData } from "../data";
 
-const About = ({ about }) => {
-  const { paragraph, personalInfo } = about;
+const About = () => {
+  const { paragraph, personalInfo } = portfolioData.about;
 
   return (
     <section id="about" className="py-20 animate-fade-in">

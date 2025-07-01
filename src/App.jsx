@@ -1,24 +1,23 @@
+import Footer from "./components/footer";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { portfolioData } from "./data";
 
 function App() {
   return (
     <div className="bg-background text-primary font-sans">
-      <Header header={portfolioData.header} />
+      <Header />
       <main className="mx-auto max-w-5xl px-4">
-        <Hero hero={portfolioData.hero} />
-        <About about={portfolioData.about} />
-        <Skills skills={portfolioData.skills} />
-        <Projects projects={portfolioData.projects} />
-        <Contact contact={portfolioData.contact} />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
-      <Footer footer={portfolioData.footer} />
+      <Footer />
     </div>
   );
 }
