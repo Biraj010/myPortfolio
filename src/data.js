@@ -33,10 +33,12 @@ export const portfolioData = {
       "I create responsive, fast, and functional websites that help people and businesses",
     ],
     description:
-      "I design and build beautiful, responsive, and user-friendly websites and applications. Welcome to my personal corner of the internet.",
+      "I design and build beautiful, responsive, and user-friendly websites and applications.Welcome to my personal corner of the internet.",
   },
   about: {
-    paragraph: `As a dedicated frontend developer, I have a passion for creating intuitive, dynamic user experiences. I thrive on turning complex problems into elegant solutions, leveraging my skills in React, JavaScript, and modern web technologies. I'm a continuous learner, always excited to explore new tools and techniques to build better, faster, and more engaging web applications.`,
+    paragraph: `Hi, I'm Biraj Regmi, a passionate front-end developer with a focus on creating responsive and easy-to-use web applications. I specialize in React.js, Redux, and integrating RESTful APIs using tools like Axios. I enjoy turning ideas into real projects that are simple, effective, and visually appealing.
+
+Currently, I'm learning backend development using Node.js and Express, aiming to become a full-stack developer. I also explore tools like Postman, follow clean coding practices, and work on improving performance and user experience in every project I build.`,
     personalInfo: {
       email: "regmibiraj.dev@gmail.com",
       phone: "+977 9846892218",
