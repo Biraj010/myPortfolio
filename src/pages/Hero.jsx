@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="max-w-3xl">
         <h1 className="text-5xl md:text-7xl font-bold mb-4">{name}</h1>
         <h2 className="text-2xl md:text-4xl text-accent mb-6">
-          I'm a <span ref={typedElement}></span>
+          <span ref={typedElement}></span>
         </h2>
         <p className="text-secondary text-lg md:text-xl mb-8">{description}</p>
         <Link
