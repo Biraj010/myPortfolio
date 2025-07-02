@@ -28,9 +28,9 @@ export const portfolioData = {
   hero: {
     name: "Biraj Regmi.",
     titles: [
-      "Frontend Developer",
-      "React - Redux Developer",
-      "UI/UX Enthusiast",
+      "Web Developer",
+      "I love creating user-friendly websites with modern tools like React and Node.js",
+      "I create responsive, fast, and functional websites that help people and businesses",
     ],
     description:
       "I design and build beautiful, responsive, and user-friendly websites and applications. Welcome to my personal corner of the internet.",
@@ -110,7 +110,6 @@ export const portfolioData = {
         "React Router",
         "Axios",
         "Redux",
-        
       ],
       liveUrl: "#",
       githubUrl:
