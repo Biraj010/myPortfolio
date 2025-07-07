@@ -55,7 +55,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
       "C++",
     ],
 
-    "Frameworks & Libraries": ["React", "Redux", "Axios", "Tailwind CSS"],
+    "Frameworks & Libraries": ["React", "Redux", "Axios","Node js","Express","MongoDB","Tailwind CSS"],
     "Tools & Platforms": [
       "Git & GitHub",
       "Figma",
