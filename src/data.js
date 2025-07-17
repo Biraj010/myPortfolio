@@ -53,6 +53,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
       "Java",
       "Python",
       "C++",
+      "MongoDB",
     ],
 
     "Frameworks & Libraries": [
@@ -61,7 +62,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
       "Axios",
       "Node js",
       "Express",
-      "MongoDB",
+      "Next.js",
       "Tailwind CSS",
     ],
     "Tools & Platforms": [
