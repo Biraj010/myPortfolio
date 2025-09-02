@@ -87,7 +87,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
       description:
         "Developed an interactive doctor appointment platform with dynamic booking cards, RESTful API integration for data fetching and user auth, and seamless page navigation.",
       stack: ["React.js", "Redux", "Axios", "Tailwind CSS", "React Router"],
-      liveUrl: "#",
+      liveUrl: "https://appointmantnepal.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Appointment",
     },
     {
@@ -104,7 +104,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "#",
+      liveUrl: "https://biraj-blog.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Blog",
     },
     {
@@ -172,7 +172,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "#",
+      liveUrl: "https://biraj-shop.netlify.app/",
       githubUrl: "https://github.com/Biraj010/e-commerce",
     },
   ],
