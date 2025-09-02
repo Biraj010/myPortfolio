@@ -39,12 +39,14 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="flex items-center space-x-4">
-                  <button
-                    onClick={() => setLightboxIndex(index)}
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent hover:underline"
                   >
-                    Demo
-                  </button>
+                    Live
+                  </a>
                   <a
                     href={project.githubUrl}
                     target="_blank"
