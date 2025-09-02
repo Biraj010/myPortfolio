@@ -172,7 +172,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "#",
+      liveUrl: "https://onliinestore.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Online-Shopping-react-redux",
     },
   ],
