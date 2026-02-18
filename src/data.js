@@ -193,7 +193,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing state ma
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "https://biraj-shop.netlify.app/",
       githubUrl: "https://github.com/Biraj010/e-commerce",
     },
     {
@@ -209,7 +208,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing state ma
       description:
         "Developed an interactive doctor appointment platform with dynamic booking cards, RESTful API integration for data fetching and user auth, and seamless page navigation.",
       stack: ["React.js", "Redux", "Axios", "Tailwind CSS", "React Router"],
-      liveUrl: "https://appointmantnepal.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Appointment",
     },
     {
@@ -226,7 +224,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing state ma
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "https://biraj-blog.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Blog",
     },
     {
@@ -244,7 +241,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing state ma
         "Axios",
         "Redux",
       ],
-      liveUrl: "#",
       githubUrl:
         "https://github.com/Biraj010/Blood-Donation-management-system.git",
     },
@@ -262,7 +258,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing state ma
         "Tailwind CSS",
         "React Router",
       ],
-      liveUrl: "https://onliinestore.netlify.app/",
       githubUrl: "https://github.com/Biraj010/Online-Shopping-react-redux",
     },
   ],

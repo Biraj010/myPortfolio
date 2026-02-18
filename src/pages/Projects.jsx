@@ -20,7 +20,7 @@ const Projects = () => {
           <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
             Following projects showcases my skills and experience through
             real-world examples of my work. Each project is briefly described with
-            links to code repositories and live demos in it. It reflects my
+            links to code repositories. It reflects my
             ability to solve complex problems, work with different technologies,
             and manage projects effectively.
           </p>
@@ -77,17 +77,6 @@ const Projects = () => {
                     #{tech}
                   </p>
                 ))}
-              </div>
-
-              <div className="mt-5 flex items-center justify-between">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#915EFF] hover:text-white transition-colors text-[14px] font-bold"
-                >
-                  Live Demo
-                </a>
               </div>
             </div>
           ))}

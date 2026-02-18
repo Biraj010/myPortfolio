@@ -6,20 +6,50 @@ const Contact = () => {
   const { personalInfo } = portfolioData.about;
   const [formData, setFormData] = useState({
     name: "",
-    subject: "",
     email: "",
+    phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you for your message!");
-    setFormData({ name: "", subject: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ type: 'success', message: data.message });
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus({ 
+          type: 'error', 
+          message: data.message || 'Failed to send message. Please try again.' 
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Network error. Please check your connection and try again.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -139,6 +169,7 @@ const Contact = () => {
                   onChange={handleChange}
                   className="bg-primary border border-white-100/10 rounded-lg py-3 px-4 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[#915EFF]"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div>
@@ -153,22 +184,23 @@ const Contact = () => {
                   onChange={handleChange}
                   className="bg-primary border border-white-100/10 rounded-lg py-3 px-4 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[#915EFF]"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
 
             <div>
               <label className="block text-xs font-medium text-secondary mb-1.5">
-                Subject
+                Phone (Optional)
               </label>
               <input
-                type="text"
-                name="subject"
-                placeholder="Project Discussion"
-                value={formData.subject}
+                type="tel"
+                name="phone"
+                placeholder="+977 9846892218"
+                value={formData.phone}
                 onChange={handleChange}
                 className="bg-primary border border-white-100/10 rounded-lg py-3 px-4 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[#915EFF]"
-                required
+                disabled={isSubmitting}
               />
             </div>
 
@@ -184,16 +216,44 @@ const Contact = () => {
                 onChange={handleChange}
                 className="bg-primary border border-white-100/10 rounded-lg py-3 px-4 w-full text-sm focus:outline-none focus:ring-2 focus:ring-[#915EFF]"
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
+
+            {submitStatus && (
+              <div
+                className={`p-4 rounded-lg text-sm ${
+                  submitStatus.type === 'success'
+                    ? 'bg-emerald-500/10 border border-emerald-500/20 text-emerald-400'
+                    : 'bg-red-500/10 border border-red-500/20 text-red-400'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <i className={`bx ${submitStatus.type === 'success' ? 'bx-check-circle' : 'bx-error-circle'} text-lg`} />
+                  <span>{submitStatus.message}</span>
+                </div>
+              </div>
+            )}
 
             <div className="flex flex-col gap-4 pt-4 border-t border-white-100/5 mt-2">
               <button
                 type="submit"
-                className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold py-3 px-8 rounded-lg transition-colors w-full flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className={`bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold py-3 px-8 rounded-lg transition-colors w-full flex items-center justify-center gap-2 ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
-                <i className="bx bx-send text-[18px]" />
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <i className="bx bx-loader-alt animate-spin text-[18px]" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <i className="bx bx-send text-[18px]" />
+                    Send Message
+                  </>
+                )}
               </button>
             </div>
           </form>
