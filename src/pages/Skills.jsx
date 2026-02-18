@@ -7,8 +7,9 @@ const Skills = () => {
   const allSkills = useMemo(
     () =>
       Object.entries(skillsByCategory).flatMap(([category, items]) =>
-        items.map((name) => ({
-          name,
+        items.map((skill) => ({
+          name: skill.name,
+          icon: skill.icon,
           category,
         }))
       ),
@@ -21,44 +22,6 @@ const Skills = () => {
   );
 
   const [activeCategory, setActiveCategory] = useState("All");
-
-  const skillIconMap = {
-    "React.js": "⚛️",
-    "Next.js": "⏭️",
-    "JavaScript (ES6+)": "🟨",
-    Redux: "🌀",
-    "HTML5": "🌐",
-    "CSS3": "🎨",
-    "Tailwind CSS": "💨",
-    "Responsive Design": "📱",
-    "Node.js": "🟢",
-    "Express.js": "🚏",
-    "RESTful APIs": "🔗",
-    Authentication: "🔒",
-    Authorization: "✅",
-    "API Development": "⚙️",
-    JWT: "🔑",
-    "Socket.io": "📡",
-    MongoDB: "🍃",
-    Mongoose: "🦫",
-    "Schema Design": "📘",
-    "Data Modeling": "🧩",
-    MySQL: "🐬",
-    PostgreSQL: "🐘",
-    "Prisma ORM": "💎",
-    Blockchain: "⛓️",
-    "Linux Server": "🐧",
-    Nginx: "🧭",
-    Git: "🌱",
-    GitHub: "🐙",
-    Postman: "📮",
-    Deployment: "🚀",
-    "CI/CD": "♻️",
-    "Agile Workflow": "🏃",
-    Debugging: "🐛",
-    "Performance Optimization": "⚡",
-    "Production Support": "🛟",
-  };
 
   const visibleSkills =
     activeCategory === "All"
@@ -97,28 +60,27 @@ const Skills = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {visibleSkills.map((skill) => {
-          const icon = skillIconMap[skill.name];
-          const fallbackLetter = skill.name.charAt(0).toUpperCase();
-
-          return (
-            <div
-              key={`${skill.name}-${skill.category}`}
-              className="bg-tertiary p-6 rounded-2xl shadow-card border border-white-100/10 flex flex-col justify-between hover:border-[#915EFF] hover:-translate-y-1 transition-all"
-            >
-              <div>
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-black-200 flex items-center justify-center text-2xl">
-                    <span>{icon || fallbackLetter}</span>
-                  </div>
-                  <h3 className="text-white text-[18px] font-semibold">
-                    {skill.name}
-                  </h3>
+        {visibleSkills.map((skill) => (
+          <div
+            key={`${skill.name}-${skill.category}`}
+            className="bg-tertiary p-6 rounded-2xl shadow-card border border-white-100/10 flex flex-col justify-between hover:border-[#915EFF] hover:-translate-y-1 transition-all"
+          >
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-2xl bg-black-200 flex items-center justify-center p-2">
+                  <img
+                    src={skill.icon}
+                    alt={skill.name}
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
+                <h3 className="text-white text-[18px] font-semibold">
+                  {skill.name}
+                </h3>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -42,6 +42,28 @@ const Work = () => {
                   </li>
                 ))}
               </ul>
+
+              {exp.tools && exp.tools.length > 0 && (
+                <div className="mt-6 pt-4 border-t border-white-100/10">
+                  <p className="text-secondary text-[13px] uppercase tracking-wider mb-3">Tools & Technologies</p>
+                  <div className="flex flex-wrap gap-3">
+                    {exp.tools.map((tool) => (
+                      <div
+                        key={tool.name}
+                        className="flex items-center gap-2 bg-black-200/50 px-3 py-2 rounded-lg hover:bg-black-200/80 transition-colors"
+                        title={tool.name}
+                      >
+                        <img
+                          src={tool.icon}
+                          alt={tool.name}
+                          className="w-5 h-5 object-contain"
+                        />
+                        <span className="text-white-100 text-[13px]">{tool.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}

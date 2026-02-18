@@ -35,12 +35,12 @@ export const portfolioData = {
       "BlockChain • Solidity • Smart Contract • Ethereum",
     ],
     description:
-      "Full-stack web developer with hands-on experience building responsive and scalable applications using React.js, Next.js, Node.js, Express, and MongoDB. Experienced in designing RESTful APIs, managing Linux-based production servers, configuring Nginx, and deploying applications to cloud environments.",
+      "Full-stack web developer with hands-on experience building responsive and scalable applications using React.js, Next.js, Node.js, Express, and MongoDB. Experienced in designing RESTful APIs, managing Linux-based production servers, configuring Nginx, and deploying applications to cloud environments and also in Blockchain and writing SmartContract in Ethrerum Platform",
   },
   about: {
-    paragraph: `I’m a full-stack web developer focused on building responsive, production-ready web applications with React.js, Next.js, Node.js, Express, and MongoDB.
+    paragraph: `I’m a full-stack web developer focused on building responsive, production-ready web applications with React.js, Next.js, Node.js, Express, MongoDB and also decenteralized dapps in Blockchain.
 
-I enjoy working across the stack—designing RESTful APIs, implementing frontend state management, and supporting deployments with Linux server management and Nginx configuration.`,
+I enjoy working across the stack—designing RESTful APIs, implementing state management, and supporting deployments with Linux server management and Nginx configuration`,
     personalInfo: {
       email: "regmibiraj.dev@gmail.com",
       phone: "+977 9846892218",
@@ -62,6 +62,14 @@ I enjoy working across the stack—designing RESTful APIs, implementing frontend
           "Set up and optimized Nginx as a reverse proxy to improve performance, security, and traffic handling",
           "Handled end-to-end backend workflows from local development to live production deployment",
         ],
+        tools: [
+          { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+          { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+          { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+          { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+          { name: "Nginx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
+          { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        ],
       },
       {
         title: "React Developer",
@@ -74,6 +82,14 @@ I enjoy working across the stack—designing RESTful APIs, implementing frontend
           "Implemented client-side routing, reusable components, and application logic using React Hooks",
           "Managed global state using Redux and handled API integration with Axios",
           "Developed SEO-friendly frontend architecture using Next.js with performance-focused rendering",
+        ],
+        tools: [
+          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+          { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+          { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+          { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+          { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+          { name: "Axios", icon: "https://axios-http.com/assets/logo.svg" },
         ],
       },
       {
@@ -88,6 +104,14 @@ I enjoy working across the stack—designing RESTful APIs, implementing frontend
           "Integrated REST APIs using Axios and handled data flow and error states effectively",
           "Collaborated with design and development teams to enhance UI/UX and overall application performance",
         ],
+        tools: [
+          { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+          { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+          { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+          { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+          { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+          { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+        ],
       },
     ],
     education: {
@@ -101,44 +125,42 @@ I enjoy working across the stack—designing RESTful APIs, implementing frontend
   },
   skills: {
     Frontend: [
-      "React.js",
-      "Next.js",
-      "JavaScript (ES6+)",
-      "Redux",
-      "HTML5",
-      "TailwinCSS",
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+      { name: "Redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+      { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     ],
     Backend: [
-      "Node.js",
-      "Solidity",
-      "Express.js",
-      "python",
-      "Ethereum",
-      "SmartContact",
+      { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
+      { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "Remix", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/remix/remix-original.svg" },
+      { name: "Smart Contract", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
     ],
     Database: [
-      "MongoDB",
-      "Mongoose",
-      "Schema Design",
-      "Data Modeling",
-      "MySQL",
-      "PostgreSQL",
-      "Blockchain",
+      { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Mongoose", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongoose/mongoose-original.svg" },
+      { name: "Schema Design", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "Prisma ORM", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
     ],
     "DevOps & Tools": [
-      "Linux Server",
-      "Nginx",
-      "Git",
-      "GitHub",
-      "Postman",
-      "Deployment",
-      "CI/CD",
+      { name: "Linux Server", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+      { name: "Nginx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
+      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+      { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+      { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     ],
     "Additional Skills": [
-      "Agile Workflow",
-      "Debugging",
-      "Performance Optimization",
-      "Production Support",
+      { name: "Agile Workflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+      { name: "Debugging", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" },
+      { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+      { name: "npm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
     ],
   },
   projects: [
@@ -246,7 +268,6 @@ I enjoy working across the stack—designing RESTful APIs, implementing frontend
   ],
   contact: {
     paragraph: `I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to connect, feel free to reach out. Let's build something amazing together!`,
-    whatsappUrl: "#", // TODO: replace with your WhatsApp link
   },
   footer: {
     socialLinks: [
