@@ -20,57 +20,125 @@ export const portfolioData = {
   header: {
     navLinks: [
       { href: "#about", text: "About" },
+      { href: "#work", text: "Experiences" },
       { href: "#skills", text: "Skills" },
       { href: "#projects", text: "Projects" },
       { href: "#contact", text: "Contact" },
     ],
   },
   hero: {
-    name: "Biraj Regmi.",
+    name: "Biraj Regmi",
     titles: [
-      "Web Developer",
-      "I love creating user-friendly websites with modern tools like React and Node.js",
-      "I create responsive, fast, and functional websites that help people and businesses",
+      "Full-Stack Web Developer (MERN)",
+      "React.js • Next.js • Node.js • MongoDB",
+      "Linux Server • Nginx • Production Deployments",
+      "BlockChain • Solidity • Smart Contract • Ethereum",
     ],
     description:
-      "I design and build beautiful, responsive, and user-friendly websites and applications.Welcome to my personal corner of the internet.",
+      "Full-stack web developer with hands-on experience building responsive and scalable applications using React.js, Next.js, Node.js, Express, and MongoDB. Experienced in designing RESTful APIs, managing Linux-based production servers, configuring Nginx, and deploying applications to cloud environments.",
   },
   about: {
-    paragraph: `Hi, I'm Biraj Regmi, a passionate front-end developer with a focus on creating responsive and easy-to-use web applications. I specialize in React.js, Redux, and integrating RESTful APIs using tools like Axios. I enjoy turning ideas into real projects that are simple, effective, and visually appealing.
+    paragraph: `I’m a full-stack web developer focused on building responsive, production-ready web applications with React.js, Next.js, Node.js, Express, and MongoDB.
 
-Currently, I'm learning backend development using Node.js and Express, aiming to become a full-stack developer. I also explore tools like Postman, follow clean coding practices, and work on improving performance and user experience in every project I build.`,
+I enjoy working across the stack—designing RESTful APIs, implementing frontend state management, and supporting deployments with Linux server management and Nginx configuration.`,
     personalInfo: {
       email: "regmibiraj.dev@gmail.com",
       phone: "+977 9846892218",
       address: "Kathmandu, Nepal",
+      linkedin: "www.linkedin.com/in/biraj-regmi-007679183",
     },
   },
+  work: {
+    experiences: [
+      {
+        title: "MERN Full Stack Developer",
+        company: "EasyPR – Press Release Distribution Agency",
+        location: "Kathmandu, Nepal",
+        start: "Nov 2025",
+        end: "Present",
+        highlights: [
+          "Developed and maintained backend services using Node.js, Express, and MongoDB, delivering secure and scalable RESTful APIs for production applications",
+          "Configured and managed Linux servers, including environment variable setup, process management, and application deployment",
+          "Set up and optimized Nginx as a reverse proxy to improve performance, security, and traffic handling",
+          "Handled end-to-end backend workflows from local development to live production deployment",
+        ],
+      },
+      {
+        title: "React Developer",
+        company: "EasyPR – Press Release Distribution Agency",
+        location: "Kathmandu, Nepal",
+        start: "Sep 2025",
+        end: "Dec 2025",
+        highlights: [
+          "Built modern and responsive user interfaces using React.js and Next.js for real-world production projects",
+          "Implemented client-side routing, reusable components, and application logic using React Hooks",
+          "Managed global state using Redux and handled API integration with Axios",
+          "Developed SEO-friendly frontend architecture using Next.js with performance-focused rendering",
+        ],
+      },
+      {
+        title: "Front-End React Developer (Internship)",
+        company: "Amazing Info Sys",
+        location: "Kathmandu, Nepal",
+        start: "Dec 2024",
+        end: "Mar 2025",
+        highlights: [
+          "Developed responsive and interactive frontend interfaces using React.js across multiple projects",
+          "Implemented Redux Toolkit for state management to improve scalability and maintainability",
+          "Integrated REST APIs using Axios and handled data flow and error states effectively",
+          "Collaborated with design and development teams to enhance UI/UX and overall application performance",
+        ],
+      },
+    ],
+    education: {
+      school: "St. Xavier’s College, Maitighar",
+      location: "Kathmandu, Nepal",
+      degree: "Bachelor in Information Management (Information Technology)",
+      start: "May 2021",
+      end: "Mar 2025",
+    },
+    certifications: ["MERN Course", "Full-Stack Web Development Certification"],
+  },
   skills: {
-    "Languages & Databases": [
-      "JavaScript (ES6+)",
-      "HTML5",
-      "CSS3 / SCSS",
-      "Java",
-      "Python",
-      "C++",
-      "MongoDB",
-    ],
-
-    "Frameworks & Libraries": [
-      "React",
-      "Redux",
-      "Axios",
-      "Node js",
-      "Express",
+    Frontend: [
+      "React.js",
       "Next.js",
-      "Tailwind CSS",
+      "JavaScript (ES6+)",
+      "Redux",
+      "HTML5",
+      "TailwinCSS",
     ],
-    "Tools & Platforms": [
-      "Git & GitHub",
-      "Figma",
+    Backend: [
+      "Node.js",
+      "Solidity",
+      "Express.js",
+      "python",
+      "Ethereum",
+      "SmartContact",
+    ],
+    Database: [
+      "MongoDB",
+      "Mongoose",
+      "Schema Design",
+      "Data Modeling",
+      "MySQL",
+      "PostgreSQL",
+      "Blockchain",
+    ],
+    "DevOps & Tools": [
+      "Linux Server",
+      "Nginx",
+      "Git",
+      "GitHub",
       "Postman",
-      "Jira",
-      "VS Code",
+      "Deployment",
+      "CI/CD",
+    ],
+    "Additional Skills": [
+      "Agile Workflow",
+      "Debugging",
+      "Performance Optimization",
+      "Production Support",
     ],
   },
   projects: [
@@ -178,6 +246,7 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
   ],
   contact: {
     paragraph: `I'm currently open to new opportunities and collaborations. If you have a project in mind or just want to connect, feel free to reach out. Let's build something amazing together!`,
+    whatsappUrl: "#", // TODO: replace with your WhatsApp link
   },
   footer: {
     socialLinks: [
@@ -188,13 +257,8 @@ Currently, I'm learning backend development using Node.js and Express, aiming to
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/biraj-regmi-007679183/",
+        url: "https://linkedin.com/in/biraj-regmi",
         icon: "bx bxl-linkedin-square",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/share/1G2Ku6SCUG/?mibextid=wwXIfr",
-        icon: "bx bxl-facebook",
       },
     ],
   },

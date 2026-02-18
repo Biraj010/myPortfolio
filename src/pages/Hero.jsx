@@ -27,26 +27,39 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-[80vh] flex items-center animate-fade-in"
+      className="relative w-full h-screen mx-auto flex items-center"
     >
-      <div className="max-w-3xl">
-        <h1 className="text-5xl md:text-7xl font-bold mb-4">{name}</h1>
-        <h2 className="text-2xl md:text-4xl text-accent mb-6">
-          <span ref={typedElement}></span>
-        </h2>
-        <p className="text-secondary text-lg md:text-xl mb-8">{description}</p>
-        <Link
-          to="projects"
-          smooth={true}
-          duration={500}
-          offset={-70}
-          className="bg-accent text-background font-bold py-3 px-6 rounded-lg hover:bg-accent/90 transition-colors cursor-pointer"
-          spy={true}
-          activeClass="text-accent"
-          hash={true}
-        >
-          View My Work
-        </Link>
+      <div className="max-w-7xl mx-auto px-6 flex flex-row items-start gap-5">
+        <div className="flex flex-col justify-center items-center mt-5">
+          <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
+          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        </div>
+
+        <div>
+          <h1 className="font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2">
+            Hi, I'm <span className="text-[#915EFF]">{name}</span>
+          </h1>
+          <p className="text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] mt-2">
+            <span ref={typedElement}></span>
+          </p>
+          <p className="text-secondary font-medium lg:text-[18px] sm:text-[16px] text-[14px] mt-4 max-w-lg">
+            {description}
+          </p>
+          <div className="mt-7">
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              offset={-70}
+              className="bg-[#915EFF] text-white font-bold py-3 px-8 rounded-xl hover:bg-[#804dee] transition-all cursor-pointer inline-block"
+              spy={true}
+              activeClass="text-accent"
+              hash={true}
+            >
+              View My Work
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

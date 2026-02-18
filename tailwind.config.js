@@ -4,15 +4,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#111827", // A dark navy blue
-        primary: "#E5E7EB", // Light gray for primary text
-        secondary: "#9CA3AF", // Medium gray for secondary text
-        accent: "#38BDF8", // A vibrant sky blue for accents
-        surface: "#1F2937", // A slightly lighter navy for cards/surfaces
-        border: "#374151", // A subtle border color
+        primary: "#050816",
+        secondary: "#aaa6c3",
+        tertiary: "#151030",
+        "black-100": "#100d25",
+        "black-200": "#090325",
+        "white-100": "#f3f3f3",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      boxShadow: {
+        card: "0px 35px 120px -15px #211e35",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/herobg.png')",
       },
       animation: {
         "fade-in": "fadeIn 1s ease-in-out",

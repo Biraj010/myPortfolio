@@ -1,28 +1,124 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { portfolioData } from "../data";
 
 const Skills = () => {
-  const skills = portfolioData.skills;
-  const skillCategories = Object.keys(skills);
+  const skillsByCategory = portfolioData.skills;
+
+  const allSkills = useMemo(
+    () =>
+      Object.entries(skillsByCategory).flatMap(([category, items]) =>
+        items.map((name) => ({
+          name,
+          category,
+        }))
+      ),
+    [skillsByCategory]
+  );
+
+  const categories = useMemo(
+    () => ["All", ...Object.keys(skillsByCategory)],
+    [skillsByCategory]
+  );
+
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const skillIconMap = {
+    "React.js": "⚛️",
+    "Next.js": "⏭️",
+    "JavaScript (ES6+)": "🟨",
+    Redux: "🌀",
+    "HTML5": "🌐",
+    "CSS3": "🎨",
+    "Tailwind CSS": "💨",
+    "Responsive Design": "📱",
+    "Node.js": "🟢",
+    "Express.js": "🚏",
+    "RESTful APIs": "🔗",
+    Authentication: "🔒",
+    Authorization: "✅",
+    "API Development": "⚙️",
+    JWT: "🔑",
+    "Socket.io": "📡",
+    MongoDB: "🍃",
+    Mongoose: "🦫",
+    "Schema Design": "📘",
+    "Data Modeling": "🧩",
+    MySQL: "🐬",
+    PostgreSQL: "🐘",
+    "Prisma ORM": "💎",
+    Blockchain: "⛓️",
+    "Linux Server": "🐧",
+    Nginx: "🧭",
+    Git: "🌱",
+    GitHub: "🐙",
+    Postman: "📮",
+    Deployment: "🚀",
+    "CI/CD": "♻️",
+    "Agile Workflow": "🏃",
+    Debugging: "🐛",
+    "Performance Optimization": "⚡",
+    "Production Support": "🛟",
+  };
+
+  const visibleSkills =
+    activeCategory === "All"
+      ? allSkills
+      : allSkills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section id="skills" className="py-20 animate-fade-in">
-      <h2 className="text-4xl font-bold text-center mb-12">
-        Technical <span className="text-accent">Skills</span>
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {skillCategories.map((category) => (
-          <div key={category} className="bg-surface p-6 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">{category}</h3>
-            <ul>
-              {skills[category].map((skill) => (
-                <li key={skill} className="text-secondary mb-2">
-                  <i className="bx bxs-chevron-right text-accent"></i> {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <section id="skills" className="py-20 max-w-7xl mx-auto px-6">
+      <div className="mb-10">
+        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
+          What I know
+        </p>
+        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+          Skills.
+        </h2>
+      </div>
+
+      <div className="flex flex-wrap gap-3 mb-10 overflow-x-auto pb-2">
+        {categories.map((category) => {
+          const isActive = activeCategory === category;
+          return (
+            <button
+              key={category}
+              type="button"
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap border transition-colors ${
+                isActive
+                  ? "bg-[#915EFF] border-[#915EFF] text-white"
+                  : "bg-tertiary border-white-100/10 text-secondary hover:text-white"
+              }`}
+            >
+              {category}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {visibleSkills.map((skill) => {
+          const icon = skillIconMap[skill.name];
+          const fallbackLetter = skill.name.charAt(0).toUpperCase();
+
+          return (
+            <div
+              key={`${skill.name}-${skill.category}`}
+              className="bg-tertiary p-6 rounded-2xl shadow-card border border-white-100/10 flex flex-col justify-between hover:border-[#915EFF] hover:-translate-y-1 transition-all"
+            >
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-black-200 flex items-center justify-center text-2xl">
+                    <span>{icon || fallbackLetter}</span>
+                  </div>
+                  <h3 className="text-white text-[18px] font-semibold">
+                    {skill.name}
+                  </h3>
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
